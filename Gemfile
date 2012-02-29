@@ -76,7 +76,7 @@ end
 
 group :test do
   gem 'spork'
-  gem 'factory_girl_rails', '~> 1.6.0'
+  gem 'factory_girl_rails'
   gem 'simplecov', :platform => :mri_19 unless ENV["CI"]  # Until Travis supports build artifacts
   gem 'fuubar'
   gem 'database_cleaner'
