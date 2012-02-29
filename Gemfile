@@ -3,11 +3,18 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 gem 'prototype-rails'
 
-# Uncomment the database that you have configured in config/database.yml
+# Run bundle using --without option to match the database you have configured
+# in config/database.yml
 # ----------------------------------------------------------------------
-# gem "mysql2", "0.3.10"
-# gem "sqlite3"
-gem "pg", "~> 0.12.2"
+group :mysql do
+  gem "mysql2", "0.3.10"
+end
+group :sqlite do
+  gem "sqlite3"
+end
+group :postgres do
+  gem "pg", "~> 0.12.2"
+end
 
 gem 'authlogic',           '~> 3.1.0'
 gem 'acts_as_commentable', '~> 3.0.1'
